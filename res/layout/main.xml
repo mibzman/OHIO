@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/cameraPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+    <RelativeLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1Set"
+            android:layout_alignParentBottom="true">
+
+
+        <Button
+                android:id="@+id/HomeButton"
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                andorid:layout_alignParentTop="true" andorid:layout_alignParentRight="true"/>
+        <Button
+                android:id="@+id/RecentButton"
+                android:text="Recents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                andorid:layout_alignParentTop="true" andorid:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</LinearLayout>

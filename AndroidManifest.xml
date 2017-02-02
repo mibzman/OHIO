@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.isotope.OrgView"
+          android:versionCode="2"
+          android:versionName="1.0.1">
+    <uses-sdk android:minSdkVersion="21"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="MyActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+
+        </activity>
+        <activity
+                android:name="com.isotope.OrgView.RecentsPage"
+                android:label="@string/recents_name"
+                android:parentActivityName="com.isotope.OrgView.MyActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light.NoTitleBar">
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.isotope.OrgView.MyActivity"/>
+        </activity>
+        <activity
+                android:name="com.isotope.OrgView.Display"
+                android:label="@string/display_name"
+                android:parentActivityName="com.isotope.OrgView.MyActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light.NoTitleBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.isotope.OrgView.MyActivity"/>
+        </activity>
+        <activity
+                android:name="com.isotope.OrgView.StartScreen"
+                android:label="@string/start_name"
+                android:parentActivityName="com.isotope.OrgView.MyActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.isotope.OrgView.HomePage"
+                android:label="@string/home_name"
+                android:parentActivityName="com.isotope.OrgView.MyActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light.NoTitleBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.isotope.OrgView.MyActivity"/>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
